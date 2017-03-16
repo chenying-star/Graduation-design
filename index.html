@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+        .btn-primary {
+            margin-bottom: 50px;
+        }
+        @media (max-width: 749px){
+            #dianjia .thumbnail {
+                height: 180px;
+            }
+            .thumbnail {
+                height: 220px;
+            }
+            div.caia:hover:after, div.guoa:hover:after, div.tiana:hover:after{
+                margin-left: 0px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<!--导航条开始-->
+<nav id="myNavbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">  <!--移动端的样式-->
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#myCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand visible-xs"><img src="img/index/canju.png"></a>
+        </div>
+
+        <div id="myCollapse" class="collapse navbar-collapse right">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">首页<img src="img/index/home.png"></a></li>
+                <li><a href="second.html">菜单浏览<img src="img/index/menu.png"></a></li>
+                <li><a href="second2.html">店家浏览<img src="img/index/shop.png"></a></li>
+                <li><a href="#gonggao">意见建议<img src="img/index/sign.png"></a></li>
+                <li><a href="shoppingcar.html">购物车<img src="img/index/shoppingcart.png"></a></li>
+                <li><a href="login.html">登陆<img src="img/index/sign-in.png"></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--导航条结束-->
+<div class="tanchu">
+    正在购物车...
+</div>
+<!--搜索框开始-->
+<div class="container search">
+    <div class="row pos">
+        <div class="col-lg-2 poss ">
+<div id="mao">
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div  id="balll"></div>
+    <div id="hat"></div>
+</div>
+        </div>
+        <div class="col-lg-8 col-md-6 col-sm-6 col-xs-10 col-xs-offset-1 poss col-lg-offset-1 col-sm-offset-3 mm">
+            <div class="row">
+                <div class="col-lg-7" >
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search" placeholder="菜品" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--搜索框结束-->
+
+<!--轮播器开始-->
+<section class="wrap">
+    <ul class="list">
+    </ul>
+    <span class="yuan">
+    </span>
+</section>
+<!--轮播器结束-->
+
+<!--菜单推荐开始-->
+<div class="recommend">
+<span>菜品推荐</span>
+
+    <div class="row" id="cai">
+
+
+
+    </div>
+
+</div>
+<!--菜单推荐结束-->
+
+<!--店家推荐开始-->
+<div class="recommend">
+    <span>店家推荐</span>
+
+    <div class="row" id="dianjia">
+
+    </div>
+
+</div>
+<!--店家推荐结束-->
+
+<!--公告信息开始-->
+<div id="gonggao">
+    <div id="gongleft">
+        <h3>公告浏览</h3>
+        <ul id="ull">
+        </ul>
+    </div>
+    <div id="advice">
+        <form>
+            <textarea  rows="8" placeholder="填写意见或建议"></textarea><br>
+            <input type="button" id="qradvice" value="提交建议" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+<!--公告信息结束-->
+
+<footer>
+    <p>
+        <a href="#">关于我们</a><a href="#">招贤纳士</a><a href="#">新闻资讯</a>
+        <a href="#">联系我们</a><a href="#">免责条款</a>
+    </p>
+    <p>
+        Copyright©2016-2017 吃饭啦 All Rights Reserved<br />
+        电子科技大学成都学院 联系电话：（86）888888888<br />
+        2017届WEB前端J1701009组
+    </p>
+</footer>
+
+</body>
+</html>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+
+

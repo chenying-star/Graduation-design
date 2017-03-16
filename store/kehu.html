@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="../manage/../css/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../manage/../css/manage.css">
+    <link rel="stylesheet" href="../manage/../css/style.css">
+    <style>
+        table{
+            border: 1px solid  #a7cbff;
+            text-align: center;
+            margin-top: 30px;
+        }
+        table tr:last-child{
+            background-color: #cccccc;
+        }
+        #dianjia tbody tr:nth-of-type(1),#dianjia tbody tr:nth-of-type(1) td:last-child,
+        #dianjia tbody tr td:last-child
+        {
+           color: #0f0f0f;
+        }
+        table tr:last-child:hover{
+            background-color: #cccccc;
+        }
+        @media  (max-width: 749px) {
+            body {
+                background-color: rgb(242,242,242);
+            }
+           table{
+               width: 100%;
+                margin-left: 0;
+           }
+            #dianjia{
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--导航条开始-->
+<nav id="myNavbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">  <!--移动端的样式-->
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#myCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a href="#" class="navbar-brand visible-xs"></a>-->
+        </div>
+
+        <div id="myCollapse" class="collapse navbar-collapse ">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="storegoods.html">商品管理</a></li>
+                <li><a href="kehu.html">客户订单管理</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">欢迎</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--导航条结束-->
+
+
+<!--实物详情开始-->
+<div id="dianjia">
+    <!--<table class="table table-hover" style="text-align: center">-->
+        <!--<thead >菜品信息如下<span id="dianadd">（添加）</span>-->
+
+        <!--</thead>-->
+        <!--<tbody >-->
+        <!--</tbody>-->
+    <!--</table>-->
+
+</div>
+<!--实物详情结束-->
+
+<footer>
+    <p>
+        <a href="#">关于我们</a><a href="#">招贤纳士</a><a href="#">新闻资讯</a>
+        <a href="#">联系我们</a><a href="#">免责条款</a>
+    </p>
+    <p>
+        Copyright©2016-2017 吃饭啦 All Rights Reserved<br />
+        电子科技大学成都学院 联系电话：（86）888888888<br />
+        2017届WEB前端J1701009组
+    </p>
+</footer>
+
+</body>
+</html>
+<script src="../manage/../js/jquery-1.11.1.js"></script>
+<script src="../manage/../js/bootstrap.min.js"></script>
+<script src="../manage/../js/kehu.js"></script>
+<script>
+
+
+
+</script>
+
+

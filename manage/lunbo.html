@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="../manage/../css/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../manage/../css/manage.css">
+    <link rel="stylesheet" href="../manage/../css/style.css">
+    <style>
+        #shang {
+            width: 0px;
+            height: 100px;
+            background: url(../img/chuan.png) no-repeat;
+            background-position: center center;
+            border: 1px dashed #ccc;
+            position: relative;
+        }
+        #lunbotu div:last-child{
+            margin-top: -10px;
+        }
+        #shang  input {
+             width: 100%;
+             height: 100%;
+            margin-top: 25px
+        }
+        @media  (max-width: 749px) {
+            body {
+                background-color: rgb(242,242,242);
+            }
+        }
+    </style>
+</head>
+<body>
+<!--导航条开始-->
+<nav id="myNavbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">  <!--移动端的样式-->
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#myCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a href="#" class="navbar-brand visible-xs"></a>-->
+        </div>
+
+        <div id="myCollapse" class="collapse navbar-collapse ">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="manage-index.html">管理员管理</a></li>
+                <li><a href="manage_dian.html">店家管理</a></li>
+                <li><a href="manage_cai.html">商品审核</a></li>
+                <li><a href="advice.html">建议</a></li>
+                <li><a href="tuijian.html">推荐管理</a></li>
+                <li><a href="lunbo.html">轮播图</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">欢迎</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--导航条结束-->
+
+<!--轮播图展示开始-->
+<div class="lunbotu" id="lunbotu">
+    <div><span class="draw">&times;</span><img src="../img/index/img.jpg"></div>
+    <div><span class="draw">&times;</span><img src="../img/index/img.jpg"></div>
+    <div><span class="draw">&times;</span><img src="../img/index/img.jpg"></div>
+    <div><span class="draw">&times;</span><img src="../img/index/img.jpg"></div>
+    <div id="shang" style="border: 1px solid red">
+        <div id="dd"><div style="float: left"><img id="img0" style="display:block;width: 100px;height: 100px" ></div></div>
+        <input type="file" name="file"   id="doc" multiple="multiple" onchange="javascript:setImagePreviews();"  accept="image/*">
+
+    </div>
+</div>
+<!--轮播图展示结束-->
+
+<footer>
+    <p>
+        <a href="#">关于我们</a><a href="#">招贤纳士</a><a href="#">新闻资讯</a>
+        <a href="#">联系我们</a><a href="#">免责条款</a>
+    </p>
+    <p>
+        Copyright©2016-2017 吃饭啦 All Rights Reserved<br />
+        电子科技大学成都学院 联系电话：（86）888888888<br />
+        2017届WEB前端J1701009组
+    </p>
+</footer>
+
+</body>
+</html>
+<script src="../manage/../js/jquery-1.11.1.js"></script>
+<script src="../manage/../js/bootstrap.min.js"></script>
+<script>
+    var imgarr=[ "../img/index/img.jpg","../img/index/img2.jpg","../img/index/img3.jpg","../img/index/img4.jpg"];
+    var lunbotu=document.getElementById("lunbotu");
+    function  sheng() {
+        var manageinner="";
+        lunbotu.innerHTML="";
+
+        for(var i=0;i<imgarr.length;i++){
+            manageinner+= "<div><span class='draw'>&times;</span><img src='"+ imgarr[i] +"'></div>"
+        }
+        lunbotu.innerHTML=manageinner+
+//                "<div id='dd'><div style='float: left'><img id='img0' style='display:block;width: 100px;height: 100px' ></div></div>"+
+                "<div id='shang'>" +
+                "<input type='file' name='file'   id='doc' multiple='multiple' onchange='javascript:setImagePreviews();'></div>";
+        var lundiv=lunbotu.getElementsByTagName("div");
+        function getStyle(obj,attr){
+            return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+        }
+
+        var draw=document.getElementsByClassName("draw");
+        for(var i=0;i<imgarr.length+1;i++){
+            lundiv[i].style.height=parseInt(getStyle(lundiv[0],"height"))+"px";
+        }
+        for(var i=0;i<imgarr.length;i++){
+
+            draw[i].index=i;
+            draw[i].onclick= function () {
+
+                var aa=confirm("是否删除图片");
+                if(aa){
+                        imgarr.splice(this.index,1);
+                        sheng();
+
+                }else{
+                    return;
+                }
+
+            }
+        }
+    }
+    sheng();
+
+    function setImagePreviews() {
+        var docObj = document.getElementById("doc");
+        //var dd = document.getElementById("dd");
+        var fileList = docObj.files;
+        var dizhi="";
+        //var imgObjPreview = document.getElementById("img0");
+        for (var i = 0; i < fileList.length; i++) {
+            if (docObj.files && docObj.files[i]) {
+
+                //火狐下，直接设img属性
+
+//                imgObjPreview.style.display = 'block';
+//
+//                imgObjPreview.style.width = '100px';
+//
+//                imgObjPreview.style.height = '100px';
+
+                //imgObjPreview.src = docObj.files[0].getAsDataURL();
+
+                //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+
+                dizhi=  window.URL.createObjectURL(docObj.files[i]);
+
+            }
+            else {
+
+                //IE下，使用滤镜
+
+                docObj.select();
+
+                var imgSrc = document.selection.createRange().text;
+
+
+                var localImagId = document.getElementById("img" + i);
+
+                //必须设置初始大小
+
+                localImagId.style.width = "100px";
+
+                localImagId.style.height = "100px";
+
+                //图片异常的捕捉，防止用户修改后缀来伪造图片
+
+                try {
+
+                    localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+
+                    localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+
+                }
+
+                catch (e) {
+
+                    alert("您上传的图片格式不正确，请重新选择!");
+
+                    return false;
+
+                }
+
+                imgObjPreview.style.display = 'none';
+
+                document.selection.empty();
+
+            }
+        }
+        imgarr.push(dizhi);
+        sheng();
+    }
+</script>
+
+

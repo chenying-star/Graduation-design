@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body >
+<div class="container">
+    <div class="row" >
+        <div class="col-lg-10 col-lg-offset-1" id="box">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12" id="logintu">
+                    <img src="img/login/focus01.jpg">
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12" >
+                    <div class="row">
+                        <div id="login" class="col-lg-10 col-xs-8 col-lg-offset-1 col-xs-offset-2 col-sm-10 col-sm-offset-1
+                        col-md-10 col-md-offset-1">
+                        <div class="form-group">
+                        <input type="text" class=" form-control " id="name" placeholder="登录名">
+                        <input type="password" class="form-control" id="password" placeholder="密码">
+
+                               <br>
+                                <label><input name="type" type="radio" value="用户" checked/>用户</label>
+                                <label><input name="type" type="radio" value="店家" />店家</label>
+                                <label><input name="type" type="radio" value="管理员" />管理员 </label>
+
+
+                        </div>
+                        <a href="zhuce.html" class="text-info">注册？</a>
+                        <input type="button" value="登录" class="btn btn-primary pull-right" id="enter">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>
+        <a href="#">关于我们</a><a href="#">招贤纳士</a><a href="#">新闻资讯</a>
+        <a href="#">联系我们</a><a href="#">免责条款</a>
+    </p>
+    <p>
+        Copyright©2016-2017 吃饭啦 All Rights Reserved<br />
+        电子科技大学成都学院 联系电话：（86）888888888<br />
+        2017届WEB前端J1701009组
+    </p>
+</footer>
+</body>
+</html>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+    function addListener(element,e,fn){
+        if(element.addEventListener){
+            element.addEventListener(e,fn,false);
+        } else {
+            element.attachEvent("on" + e,fn);
+        }
+    }
+    var user = document.getElementById("name");
+    addListener(user,"click",function(){
+        if(!user.value){
+            user.value = "";
+        }
+    })
+
+    var mima = document.getElementById("password");
+    addListener(mima,"click",function(){
+        if(!mima.value){
+            mima.value = "";
+        }
+    })
+
+    var yonghu=[{user:"chenying",mima:123}];
+    var manage=[{user:"chenying",mima:123},{user:"tu",mima:123}];
+    var dianjia=[{user:"chenying",mima:123}];//ajax获得数组
+    var enter = document.getElementById("enter");
+    var dataarr={};
+    addListener(enter,"click", function () {
+        if(user.value&&mima.value){
+            dataarr.user=user.value;
+            dataarr.mima=mima.value;
+           // var type= $('input:radio[name="type"]:checked').val();
+            var type= $('input[type="radio"]:checked').val();
+            if(type=="用户"){
+                for(var i=0;i<yonghu.length;i++){
+                    if(dataarr.user==yonghu[i].user && dataarr.mima==yonghu[i].mima){
+                        alert("登陆成功");
+                        location.href="index.html";
+                    }
+                }
+            }else if(type=="管理员"){
+
+                for(var i=0;i<manage.length;i++){
+                    if(dataarr.user==manage[i].user && dataarr.mima==manage[i].mima){
+                        alert("登陆成功");
+                        location.href="manage/manage-index.html";
+                    }
+                }
+
+            }else if(type=="店家"){
+
+                for(var i=0;i<dianjia.length;i++){
+                    if(dataarr.user==dianjia[i].user && dataarr.mima==dianjia[i].mima){
+                        alert("登陆成功");
+                        location.href="store/storegoods.html";
+                    }
+                }
+            }
+
+        }else{
+            alert("请填写正确的信息")
+        }
+    } )
+//    document.title=document.documentElement.offsetWidth||document.body.offsetWidth;
+</script>

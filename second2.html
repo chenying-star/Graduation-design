@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .search {
+            margin-bottom: -50px;
+        }
+        @media (max-width: 749px){
+            .search {
+                margin-bottom: 20px;
+            }
+            .thumbnail {
+                height: 170px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!--导航条开始-->
+<nav id="myNavbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">  <!--移动端的样式-->
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#myCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand visible-xs"><img src="img/index/canju.png"></a>
+        </div>
+
+        <div id="myCollapse" class="collapse navbar-collapse right">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">首页<img src="img/index/home.png"></a></li>
+                <li><a href="second.html">菜单浏览<img src="img/index/menu.png"></a></li>
+                <li><a href="second2.html">店家浏览<img src="img/index/shop.png"></a></li>
+                <li><a href="index.html#gonggao">意见建议<img src="img/index/sign.png"></a></li>
+                <li><a href="shoppingcar.html">购物车<img src="img/index/shoppingcart.png"></a></li>
+                <li><a href="login.html">登陆<img src="img/index/sign-in.png"></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--导航条结束-->
+
+<!--实物详情开始-->
+<div class="thing">
+    <h1>店家浏览</h1>
+    <!--搜索框开始-->
+    <div class="container search">
+        <div class="row pos">
+            <div class="col-lg-2 poss "> </div>
+            <div class="col-lg-8 col-md-6 col-sm-6 col-xs-10 col-xs-offset-1 poss col-lg-offset-1 col-sm-offset-3 mm">
+                <div class="row">
+                    <div class="col-lg-7" >
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="search" placeholder="输入店家" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-search"></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    <!--搜索框结束-->
+    <div class="recommend">
+
+        <div class="row" id="cai"></div>
+
+        <div id="fenye" class="fenye"></div>
+</div>
+<!--实物详情结束-->
+
+<footer>
+    <p>
+        <a href="#">关于我们</a><a href="#">招贤纳士</a><a href="#">新闻资讯</a>
+        <a href="#">联系我们</a><a href="#">免责条款</a>
+    </p>
+    <p>
+        Copyright©2016-2017 吃饭啦 All Rights Reserved<br />
+        电子科技大学成都学院 联系电话：（86）888888888<br />
+        2017届WEB前端J1701009组
+    </p>
+</footer>
+
+</body>
+</html>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fenye.js"></script>
+<script>
+    var dianarr=[
+        {img:'img/index/dian1.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:4,id:1},
+        {img:'img/index/dian2.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:5,id:2},
+        {img:'img/index/dian3.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:3,id:3},
+        {img:'img/index/dian4.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:5,id:4},
+        {img:'img/index/dian5.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:4,id:5},
+        {img:'img/index/dian6.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:5,id:6},
+        {img:'img/index/dian7.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:3,id:7},
+        {img:'img/index/dian8.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:5,id:8},
+        {img:'img/index/dian9.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:4,id:9},
+        {img:'img/index/dian10.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:5,id:10},
+        {img:'img/index/dian11.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:3,id:11},
+        {img:'img/index/dian12.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:5,id:12},
+        {img:'img/index/dian13.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:3,id:13},
+        {img:'img/index/dian14.png',biaoti:'我家台湾餐厅',peisong:2,qisong:20,star:5,id:14}
+    ];
+    var search=document.getElementById("search");
+    var basicaddon2=document.getElementById("basic-addon2");
+    basicaddon2.onclick= function () {
+        location.href="search.html?c="+search.value+"&&a=dian";
+    }
+    var cai=document.getElementById("cai");
+    var things=document.getElementsByClassName("thing")[0];
+
+    //分页开始
+    page({
+        id:"fenye",
+        nownum:1,
+        allnum:Math.ceil(dianarr.length/8),
+        callback: function (now,all) {
+            var numm=now*8<dianarr.length?8:dianarr.length-(now-1)*8;
+
+            function  fenzhonf() {
+
+                for(var i=0;i<numm;i++){
+                    caiiner+= "<a href='dianpu.html?id="+dianarr[(now-1)*8+i].id  +"'><div class='col-sm-6 col-md-4 col-lg-3 col-xs-6' >"+
+                            "<div class='thumbnail'>"+
+                            "<img src='img/index/dian"+ ((now-1)*8+i+1) +".png' alt='...'>"+
+                            "<div class='caption'>"+
+                            "<h3>"+ dianarr[(now-1)*8+i].biaoti  +"</h3>"+
+                            "<p class='xingp'>配送费  &yen"+ dianarr[(now-1)*8+i].peisong+"&nbsp 起送  &yen"+ dianarr[(now-1)*8+i].qisong+"</p> "+
+                            "</div></div></div></a>" ;
+
+                }
+
+                cai.innerHTML=caiiner;
+
+            }
+
+            if(cai.innerText==""){
+                var  caiiner="";
+                fenzhonf();
+            }
+            else{
+                cai.innerHTML="";
+                var  caiiner="";
+                fenzhonf();
+            }
+        }
+    })
+</script>
+
+

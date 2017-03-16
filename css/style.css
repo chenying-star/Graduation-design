@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(242,242,242);
+}
+#box{
+    min-height: 420px;
+    background: #ffffff;
+    margin-top: 150px;
+    height: auto;
+    box-shadow: 0 5px 15px 3px #ccc;
+}
+#logintu{
+    border-right: 1px dashed #ccc;
+    text-align: center;
+    line-height: 420px;
+}
+#logintu img{
+    width: 100%;
+    height: 100%;
+}
+#name{
+    margin-top: 120px;
+    margin-bottom: 40px;
+    background: url("../img/login/btn-user.gif") no-repeat 98%;
+}
+#password{
+    background: url("../img/login/btn-password.gif") no-repeat 98%;
+}
+footer{
+    text-align: center;
+    margin-top: 60px;
+}
+footer p{
+    color: #cccccc;
+    font-size: 9px;
+}
+footer p a{
+    color: #666666;
+    display: inline-block;
+    border-right: 1px solid #cccccc;
+    width: 80px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.form-horizontal .form-group {
+    color: #666666;
+    margin-top: 20px;
+}
+.form-horizontal .form-group:nth-of-type(1){
+    margin-top: 50px;
+}
+@media  (max-width: 749px) {
+    body{
+        background-color: white;
+    }
+    #box{
+        box-shadow: none;
+        margin-top:0px;
+    }
+    footer p a{
+        width: 60px;
+        font-size: 9px;
+    }
+    #logintu{
+        border-right:none;
+    }
+    #name{
+        margin-top: 0;
+    }
+}
+.biaoti{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    color:#a7cbff ;
+}
+.biaoti img{
+    animation :gongche 4s ease-in-out 1s  infinite alternate ;
+}
+@keyframes gongche {
+    0%{
+    transform:translateX(0px);
+}
+    100% {
+        transform:translateX(400px);
+    }
+}
+
+tbody img{
+  width: 20%;
+  margin: 10px 0 10px 50px;
+    display: inline-block;
+    float: left;
+}
+.commond{
+    margin-left: 30px;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    margin-top: 5%;
+}
+.count-input{
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #aaa;
+    color: #343434;
+    text-align: center;
+    background-color: #fff;
+    z-index: 2;
+    position: relative;
+}
+.add, .reduce{
+    z-index: 1;
+    position: relative;
+    height: 25px;
+    width: 20px;
+    border: 1px solid #e5e5e5;
+    background: #cccccc;
+    text-align: center;
+    line-height: 20px;
+    color: #444;
+    display: inline-block;
+padding-top: -5px;
+    cursor: pointer;
+}
+.delete{
+    cursor: pointer;
+    color: steelblue;
+}
+.foot {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    color: #666;
+    height: 48px;
+    background-color: #a7cbff;
+    background-image: linear-gradient(RGB(241,241,241),#a7cbff);
+    position: relative;
+}
+.foot div{
+    display: inline-block;
+    position: absolute;
+}
+#selected,.closing,.total,.futime{
+    height: 48px;
+    line-height: 48px;
+    right: 20%;
+}
+.futime{
+    right: 18%;
+}
+.qingjia{
+    text-align: center;
+    height: 0px;
+    transition:all 1s;
+    opacity: 0;
+    background-color: rgb(235,235,235);
+}
+.qingjia ul li{
+    list-style: none;
+    border-bottom: 1px dashed #c0c0c0;
+}
+.qingjia textarea{
+    width: 60%;
+    height: 100px;
+    margin-top: 10px;
+}
+.shouhuo{
+    cursor: pointer;
+    background-color: darkred;
+    float: left;
+    left: 5%;
+    height: 30px;
+    color: #ffffff;
+    top: 9px;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0px 10px 5px 10px;
+}
+.total{
+   right: 8%;
+}
+#selected span,.closing,#priceTotal{
+    color: red;
+}
+.closing{
+    right: 2%;
+    cursor: pointer;
+}
+.reduce{
+    margin-right: -1px;
+}
+.add{
+    margin-left: -1px;
+}
+tbody tr:hover {
+    background: RGB(238,246,255);
+}
+th {
+    background: #e2f2ff;
+    border-top: 3px solid #a7cbff;
+    height: 30px;
+}
+#cartTable {
+    border: 1px solid  #a7cbff;
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+thead th{
+    text-align: center;
+}
+.navbar-collapse {
+    border-top: none;
+}
+.navbar-fixed-top {
+    border-width: 0 0 0px;
+}
+.biaoti #xiangqing{
+    color: red;
+    font-size: 12px;
+    cursor: pointer;
+}
+#lunbotu{
+    width: 80%;
+    min-height: 100px;
+    margin: 100px 10% 30px 10%;
+
+}
+#lunbotu div{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 30%;
+    margin: 10px 1.5% 10px 1.5%;
+   border: 1px solid #c0c0c0;
+    position: relative;
+}
+#lunbotu div img{
+    height: 100%;
+}
+#lunbotu div span{
+    position: absolute;
+    right: 10px;
+    top:5px;
+    cursor: pointer;
+    color: red;
+    width: 25px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    background-color:#cccccc;
+}
+#lunbotu div span.draw::before, #lunbotu div span.draw::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+}
+#lunbotu div span.draw {
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+}
+#lunbotu div span.draw::before, #lunbotu div span.draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+}
+#lunbotu div span.draw::before {
+    top: 0;
+    left: 0;
+}
+#lunbotu div span.draw::after {
+    bottom: 0;
+    right: 0;
+}
+#lunbotu div span.draw:hover::before, #lunbotu div span.draw:hover::after {
+    width: 100%;
+    height: 100%;
+}
+#lunbotu div span.draw:hover::before {
+    border-top-color: darkgreen;
+    border-right-color: darkgreen;
+    -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+#lunbotu div span.draw:hover::after {
+    border-bottom-color: darkgreen;
+    border-left-color: darkgreen;
+    -webkit-transition: width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+#lunbotu img{
+    width: 100%;
+
+}
+.addre{
+    width: 20%;
+    position: relative;
+    float: left;
+    margin-left: 2%
+}
+.dangtel{
+    width: 20%;
+    margin-left:3%;
+    position: relative;
+    float: left;
+    z-index: 100
+}
+div.caia:before,  div.guoa:before,  div.tiana:before{
+    content: "";
+    width: 90%;
+    height: 90%;
+    position:absolute;
+    z-index: 100;
+    background-color:rgba(50,81,128,0.5);
+    left:5%;
+    top: 0;
+    opacity: 0;
+}
+div.caia:after, div.guoa:after, div.tiana:after{
+    content: "";
+    background: url("../img/6658.png") no-repeat ;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    left: 50%;
+    margin-left:-5%;
+    top: 50%;
+    margin-top: -15%;
+    z-index: 101;opacity: 0; transform:translateY(-100px);
+}
+.tanchu{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color:#cccccc;
+    position: fixed;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -18px;
+    z-index: -1;
+    text-align: center;
+    opacity: 0;
+    transition:all 0.5s;
+
+}
+div.caia:hover:after, div.guoa:hover:after, div.tiana:hover:after{
+    opacity: 1;
+    transform:translateY(0px);
+    transition:all 0.5s;
+    cursor: pointer;
+}
+div.caia:hover:before, div.guoa:hover:before, div.tiana:hover:before{
+    opacity: 1;transition:all 0.5s;
+}
+@media  (max-width: 420px) {
+    div.caia:after, div.guoa:after, div.tiana:after{
+        left: 42%;
+    }
+    .addre,.dangtel{
+        top:50px;
+        width: 40%;
+    }
+    .foot div.futime {
+        display: none;
+    }
+
+    tbody img {
+        width: 50%;
+        margin: 5px 0px 0px 25%;
+    }
+
+    .commond {
+        margin-left: 0px;
+        font-size: 12px;
+    }
+
+    .count-input {
+        width: 30px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .add, .reduce {
+        height: 20px;
+        width: 15px;
+    }
+
+    table {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .foot {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #selected {
+        right: 50%;
+    }
+
+    .total {
+        right: 20%;
+    }
+
+    #foot div {
+        font-size: 12px;
+    }
+
+    .biaoti {
+        margin-top: 20px;
+    }
+}
+@keyframes gongche {
+        0%{
+            transform:translateX(0px);
+        }
+        100% {
+            transform:translateX(200px);
+        }
+    }

@@ -1,0 +1,95 @@
+body{
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.navbar-default{
+    background-color: rgb(52,177,231);
+    font-size: 18px;
+
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #cccccc;
+}
+#manage, #dianjia,#caiccai{
+    margin-top: 150px;
+    width: 80%;
+    margin-left: 10%;
+}
+#caipin{
+    margin-top: 80px;
+    width: 80%;
+    margin-left: 10%;
+}
+#manage tr:nth-of-type(1),#dianjia tr:nth-of-type(1),#caipin tr:nth-of-type(1),#caiccai tr:nth-of-type(1){
+    color: #31708f;
+    font-size: 15px;
+}
+#manage tr:nth-of-type(1) td:last-child, #dianjia tr:nth-of-type(1) td:last-child, #caipin tr:nth-of-type(1) td:last-child, #caiccai tr:nth-of-type(1) td:last-child{
+    color: #31708f;
+}
+#manage tr td:last-child,#manageadd, #dianjia tr td:last-child,#dianadd, #caipin tr td:last-child,#caiadd,#caiccai tr td:last-child{
+    color: #ac2925;
+    cursor: pointer;
+}
+#shang,#shangg{width:100px;
+       height: 100px;
+       background: url("../img/chuan.png") no-repeat;
+       background-size:50% 50%;
+       background-position: center center;
+       border: 1px dashed #ccc;
+position: relative}
+#shang input,#shangg input{width: 100px;
+            height: 100px;
+            opacity: 0;}
+#shang #shangtu,#shangg #shangtuu{
+    position:absolute ;
+    left: 120%;
+    color: #ccc;
+    font-size: 14px;
+    top: -10%;
+}
+#dd img,#ddd img{
+    position: absolute;
+}
+#zhezhao,#zhezhao2{
+    width: 80%;
+    background-color: rgb(130,130,130);
+    height:0px;
+    opacity: 0;
+    z-index: 3;
+    /*position: absolute;*/
+    left: 10%;position: fixed;
+    top: 100px;
+    border-radius: 10px;
+    transform:translateX(1250px);
+    transition:all 0.8s ;
+    box-shadow: inset 0 0 130px 80px rgb(200,200,200);
+}
+#zhezhao{
+    top: 80px;
+}
+#zhezhao span,#zhezhao2 span{
+    position: absolute;
+    right: 18px;
+    top: 5px;
+    color: dodgerblue;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+#zhezhao span:hover,#zhezhao2 span:hover{
+    transition:all 0.3s;
+    transform:rotate(360deg) scale(1.6);
+}
+#zhe {
+     margin-top: 100px;
+
+}
+.form-group #xiu{
+    display: none;
+}
+#hao{
+    margin-bottom: 60px;
+}
